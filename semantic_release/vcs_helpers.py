@@ -44,6 +44,7 @@ def get_formatted_tag(version):
 
 
 @check_repo
+@LoggedFunction(logger)
 def get_commit_log(from_rev=None):
     """Yield all commit messages from last to first."""
     rev = None
