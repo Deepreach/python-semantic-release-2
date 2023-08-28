@@ -59,6 +59,7 @@ def get_commit_log(from_rev=None):
             )
 
     for commit in repo.iter_commits(rev):
+        print(rev)
         yield (commit.hexsha, commit.message.replace("\r\n", "\n"))
 
 
